@@ -15,7 +15,7 @@ class ProductTile extends StatelessWidget {
       onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(builder: (context) => ProductScreen(product))
-        )
+        );
       },
       child: Card(
         child: type == "grid" ?
