@@ -29,9 +29,7 @@ class LoginBloc extends BlocBase with LoginValidators {
   LoginBloc() {
     _streamSubscription = FirebaseAuth.instance.onAuthStateChanged.listen((user) async {
       if (user != null) {
-        print(user.uid);
         if (await verifyPrivileges(user)) {
-          print(user.uid);
           _stateController.add(LoginState.SUCCESS);
         } else {
           FirebaseAuth.instance.signOut();
@@ -44,7 +42,6 @@ class LoginBloc extends BlocBase with LoginValidators {
   }
 
   Future<bool> verifyPrivileges(FirebaseUser user) async {
-    print(user.uid);
     return await Firestore.instance.collection("admins").document(user.uid).get().then((doc) {
       if (doc.data != null) {
         return true;

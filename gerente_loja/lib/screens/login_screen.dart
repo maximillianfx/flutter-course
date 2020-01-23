@@ -36,6 +36,13 @@ class _LoginScreenState extends State<LoginScreen> {
     });
   }
 
+
+  @override
+  void dispose() {
+    _loginBloc.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
             case LoginState.FAIL:
             case LoginState.SUCCESS:
             case LoginState.IDLE:
+            default:
             return Stack(
               alignment: Alignment.center,
               children: <Widget>[
