@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "930324511241",
+    "firebase_url": "https://my-street-239716.firebaseio.com",
+    "project_id": "my-street-239716",
+    "storage_bucket": "my-street-239716.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:930324511241:android:99bb0e6cf5925a2c",
+        "android_client_info": {
+          "package_name": "br.com.hc.mystreet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "930324511241-7ajlgrc6n7l965gbc2laelimnar4jnt2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mystreet",
+            "certificate_hash": "a955184bef401b3d16d32be99f41bb585d04617e"
+          }
+        },
+        {
+          "client_id": "930324511241-tqgta6t380tq79gk5vd2k8pb32d2keb4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8ljZPoslgBAcCuuhoM_63n3L-56qozms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "930324511241-tqgta6t380tq79gk5vd2k8pb32d2keb4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
