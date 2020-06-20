@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:xlo/blocs/home_bloc.dart';
 import 'package:xlo/common/custom_drawer/custom_drawer.dart';
 import 'package:xlo/screens/home/widgets/search_dialog.dart';
+import 'package:xlo/screens/home/widgets/top_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -84,6 +85,11 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       drawer: CustomDrawer(),
+      body: Column(
+        children: <Widget>[
+          TopBar(),
+        ],
+      ),
     );
   }
 
