@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:xlo/models/filter.dart';
+import 'package:xlo/screens/filter/widgets/order_by_field.dart';
 import 'package:xlo/screens/filter/widgets/section_title.dart';
 
 class FilterScreen extends StatefulWidget {
@@ -24,6 +26,12 @@ class _FilterScreenState extends State<FilterScreen> {
             child: ListView(
               padding: const EdgeInsets.all(16),
               children: <Widget>[
+                OrderByField(
+                  initialValue: OrderBy.DATE,
+                  onSaved: (v) {
+
+                  },
+                ),
                 const SectionTitle(title: "Ordenar por"),
                 const SectionTitle(title: "Preço (R\$)"),
                 const SectionTitle(title: "Tipo de anunciante")
