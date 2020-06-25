@@ -4,6 +4,7 @@ import 'package:xlo/blocs/login/field_state.dart';
 import 'package:xlo/blocs/login/login_bloc.dart';
 import 'package:xlo/screens/login/widgets/login_button.dart';
 import 'package:xlo/screens/login/widgets/text_with_divider.dart';
+import 'package:xlo/screens/signup/signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -134,7 +135,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(fontSize: 16),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => SignUpScreen()
+                          )
+                        );
+                      },
                       child: Text(
                         "Cadastre-se",
                         style: TextStyle(
