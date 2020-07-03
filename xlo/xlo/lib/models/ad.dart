@@ -5,6 +5,7 @@ class Ad {
   List<dynamic> images;
   String title;
   String description;
+  DateTime dateCreated = DateTime.now();
 
   Address address;
 

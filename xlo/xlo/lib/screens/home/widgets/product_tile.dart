@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:xlo/helpers/format_field.dart';
 import 'package:xlo/models/ad.dart';
+import 'package:xlo/screens/product/product_screen.dart';
 
 class ProductTile extends StatelessWidget {
 
@@ -11,7 +13,11 @@ class ProductTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => ProductScreen(ad: ad)
+        ));
+      },
       child: Container(
         height: 135,
         margin: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
@@ -60,9 +66,5 @@ class ProductTile extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  String numToString(num number) {
-    return NumberFormat('###,##0.00', 'pt-br').format(double.parse(number.toStringAsFixed(2)));
   }
 }
